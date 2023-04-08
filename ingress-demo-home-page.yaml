@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: django-ing
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /home
+        pathType: Prefix
+        backend:
+          service:
+            name: home-svc
+            port:
+              number: 8000
+  - http:
+      paths:
+      - path: /page
+        pathType: Prefix
+        backend:
+          service:
+            name: page-svc
+            port:
+              number: 8000
