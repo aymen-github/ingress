@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: home
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: home
@@ -41,7 +41,7 @@ kind: Deployment
 metadata:
   name: page 
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: page
