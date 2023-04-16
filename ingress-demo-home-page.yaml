@@ -5,6 +5,8 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
 spec:
+  tls:
+  - secretName: my-tls-secret
   rules:
   - http:
       paths:
